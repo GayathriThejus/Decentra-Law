@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bookmydoc</title>
+    <link rel="stylesheet" href="main.css">
+
+   
+</head>
+<body>
+    
+    <div class="full-page">
+        
+        <div class="navbar">
+            <div class="title">
+               Decentra-Law
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    
+                </ul>
+            </nav>
+        </div>
+           
+      
+        
+       
+            <div class="circle1"></div>
+        <div class="form-box" id="form1">
+            
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Authorize</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Verify</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='BAR Exam CID' required id="b_cid">
+		            <input type='text'class='input-field'placeholder='Degree CID' required id="d_cid">
+                    
+                        <button type='submit'class='submit-btn' id="u_but" onclick="uploadDocument()">Upload Document</button>
+                        <div id="target">
+                
+                        </div>
+               
+    
+
+		    
+		 </form>
+		 <form id='register' class='input-group-register'>
+            
+            <div style="text-align: center;">
+                <label class='label'for="documentIdInput">Enter Document ID</label>
+                <input type="text" class="input-field" id="documentIdInput" />
+                <button type='submit'class='submit-btn'onclick="retrieveDocument()" id="documentIdButton" >Retrieve Document</button>
+            </div>
+            
+            
+	         </form>
+             
+        </div>
+       
+        </div>
+       
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="base.js"></script>
+</body>
+</html>
